@@ -3,12 +3,12 @@ import org.junit.*;
 import static org.junit.Assert.*;
 
 
-public class Testdog {
-    dog g;
+public class TestDog {
+    Dog g;
 
     @Before
     public void setUp() throws Exception {
-        g = new dog();
+        g = new Dog();
     }
 
     @Test(timeout = 50)
@@ -24,13 +24,13 @@ public class Testdog {
     @Test(timeout = 50)
     public void TestUpgradeSpeed() {
         g.upgradeSpeed();
-        assertEquals(1, g.getMaxSpeed());
+        assertEquals(2, g.getMaxSpeed());
     }
 
     @Test(timeout = 50)
     public void TestDowngradeSpeed() {
         g.downgradeSpeed();
-        assertEquals(0, g.getMaxSpeed());
+        assertEquals(1, g.getMaxSpeed());
     }
 
     @Test(timeout = 50)

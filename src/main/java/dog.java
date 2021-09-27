@@ -1,8 +1,8 @@
-public class dog implements Tradable, Domesticatable, Drivable {
-    private  final int maxSpeed;
+public class Dog implements Tradable, Domesticatable, Drivable {
+    private int maxSpeed;
 
 
-    public dog() {
+    public Dog() {
         this.maxSpeed = 1;
     }
 
@@ -18,12 +18,15 @@ public class dog implements Tradable, Domesticatable, Drivable {
 
     @Override
     public void upgradeSpeed() {
-
+        this.maxSpeed += this.maxSpeed;
     }
 
     @Override
     public void downgradeSpeed() {
-
+        if (this.maxSpeed > 1){
+            this.maxSpeed -= 1;
+        }
+        
     }
 
     @Override
